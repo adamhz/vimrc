@@ -70,6 +70,10 @@ Plugin 'L9'
 Plugin 'FuzzyFinder'
 Plugin 'rking/ag.vim'
 
+Plugin 'heavenshell/vim-pydocstring'
+
+Plugin 'lervag/vimtex'
+
 call vundle#end()
 filetype plugin indent on     " required!
 "
@@ -93,7 +97,7 @@ set relativenumber
 set listchars=tab:>─,trail:·,extends:>,precedes:<
 set list
 
-autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 colorcolumn=80
+autocmd Filetype python setlocal expandtab tabstop=4 softtabstop=4 shiftwidth=4 colorcolumn=80
 autocmd Filetype dosini setlocal colorcolumn=80
 autocmd Filetype tex setlocal expandtab tabstop=2 shiftwidth=2 colorcolumn=80 spell spelllang=en_gb
 autocmd FileType html setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
@@ -192,3 +196,5 @@ call SetArrowKeysAsTextShifters()
 
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
+
+set clipboard=unnamed
