@@ -35,6 +35,10 @@ let g:ale_javascript_eslint_executable = 'eslint_d'
 let g:ale_lint_on_save = 1
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '⚠'
+let g:ale_linters = {
+\   'python': ['flake8', 'flake8-commas', 'flake8-import-order', 'flake8-quotes'],
+\   'javascript': ['eslint'],
+\}
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " Plugin 'scrooloose/nerdcommenter'
@@ -42,10 +46,10 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 Plugin 'scrooloose/nerdtree'
 let NERDTreeBookmarksFile=expand("$HOME/.vim-NERDTreeBookmarks")
 let NERDTreeShowBookmarks=1
-" Plugin 'groenewege/vim-less'
+Plugin 'groenewege/vim-less'
 " Plugin 'hdima/python-syntax'
 Plugin 'leafgarland/typescript-vim'
-Plugin 'luochen1990/rainbow'
+" Plugin 'luochen1990/rainbow'
 let g:rainbow_active = 1
 
 Plugin 'derekwyatt/vim-scala'
@@ -71,33 +75,20 @@ Plugin 'L9'
 Plugin 'FuzzyFinder'
 Plugin 'rking/ag.vim'
 
-" Plugin 'luochen1990/rainbow'
-" let g:rainbow_active = 1
-" Plugin 'derekwyatt/vim-scala'
-" Plugin 'Raimondi/delimitMate'
-" 
+let g:rainbow_active = 1
 " Plugin 'SirVer/ultisnips'
 " Plugin 'honza/vim-snippets'
 " 
 " Plugin 'jmcantrell/vim-virtualenv'
 " 
-" Plugin 'othree/yajs.vim'
-" Plugin 'othree/es.next.syntax.vim'
-" Plugin 'ternjs/tern_for_vim'
-" Plugin 'elzr/vim-json'
-" 
 " "Plugin 'Yggdroot/indentLine'
-" 
-" " vim-scripts repos
-" Plugin 'L9'
-" Plugin 'FuzzyFinder'
-" Plugin 'rking/ag.vim'
 " 
 Plugin 'heavenshell/vim-pydocstring'
 " 
 " Plugin 'lervag/vimtex'
 " 
 " Plugin 'szw/vim-tags'
+Plugin 'jelera/vim-javascript-syntax'
 call vundle#end()
 filetype plugin indent on     " required!
 "
